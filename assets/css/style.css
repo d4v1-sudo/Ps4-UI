@@ -1,0 +1,46 @@
+/* GLOBAL */
+@import './global/global.css';
+@import './utilities/typography.css';
+@import './utilities/colors.css';
+
+/* UTILITIES */
+@import './utilities/components.css';
+
+/* HOME */
+@import './global/header.css';
+@import './home/introduction.css';
+@import './home/about.css';
+@import './home/functions.css';
+@import './home/produts.css';
+@import './home/faqs.css';
+@import './global/footer.css';
+
+/* TERMS */
+@import './terms/terms.css';
+
+/* PRIVACY */
+@import './privacy/privacy.css';
+
+/* CONTACT */
+@import './contact/contact.css';
+
+/* CONTROLLERS */
+@import './controllers/controllers.css';
+
+/* BUY */
+@import './buy/buy.css';
+
+/* PRODUTS */
+@import './produts/produts.css';
+
+/* SCROLL UP */
+@import './utilities/scroll_up.css';
+
+/* SCROLL BAR */
+@import './utilities/scroll_bar.css';
+
+/* PRELOADER */
+@import './utilities/preloader.css';
+
+/* EMAIL */
+@import './email/email.css';
