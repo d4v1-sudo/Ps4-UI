@@ -294,76 +294,75 @@ document.addEventListener("keydown", function (event) {
     }
 });
 
-// Timer to unlock buttons
+// Timer para desbloquear botões
 setTimeout(function () {
-    timeIsUp = true;
+    tempoAcabou = true;
 }, 15000);
 
-let counter = 15;
+let contador = 15;
 let timer = setInterval(function () {
-    console.log(counter + " seconds remaining...");
-    counter--;
-    if (counter < 0) {
+    console.log(contador + " segundos restantes...");
+    contador--;
+    if (contador < 0) {
         clearInterval(timer);
-        console.log("Time's up");
+        console.log("O tempo acabou")
     }
 }, 1000);
 
-// Timer to unlock buttons
-setTimeout(function () {
-    timeIsUp = true;
-    document.getElementById("message").style.display = "block";
-}, 15000);
+    // Timer para desbloquear botões
+    setTimeout(function () {
+      tempoAcabou = true;
+      document.getElementById("mensagem").style.display = "block";
+    }, 15000);
+    
+//Notification
+    function showNotification() {
+        const title = "Hello World!";
+        const message = "Ganhou a primeira conquista.";
+        const icon = "./assets/img/icon.png";
 
-// Notification
-function showNotification() {
-    const title = "Hello World!";
-    const message = "Achieved the first trophy.";
-    const icon = "./assets/img/icon.png";
+        const notification = document.createElement("div");
+        notification.classList.add("notification-container");
 
-    const notification = document.createElement("div");
-    notification.classList.add("notification-container");
+        const iconContainer = document.createElement("div");
+        iconContainer.classList.add("icon-container");
+        const iconImg = document.createElement("img");
+        iconImg.setAttribute("src", icon);
+        iconContainer.appendChild(iconImg);
+        notification.appendChild(iconContainer);
 
-    const iconContainer = document.createElement("div");
-    iconContainer.classList.add("icon-container");
-    const iconImg = document.createElement("img");
-    iconImg.setAttribute("src", icon);
-    iconContainer.appendChild(iconImg);
-    notification.appendChild(iconContainer);
+        const contentContainer = document.createElement("div");
+        contentContainer.classList.add("content-container");
+        const titleElem = document.createElement("h3");
+        titleElem.classList.add("notification-title");
+        titleElem.textContent = title;
+        const messageElem = document.createElement("p");
+        messageElem.classList.add("notification-message");
+        messageElem.textContent = message;
+        contentContainer.appendChild(titleElem);
+        contentContainer.appendChild(messageElem);
+        notification.appendChild(contentContainer);
 
-    const contentContainer = document.createElement("div");
-    contentContainer.classList.add("content-container");
-    const titleElem = document.createElement("h3");
-    titleElem.classList.add("notification-title");
-    titleElem.textContent = title;
-    const messageElem = document.createElement("p");
-    messageElem.classList.add("notification-message");
-    messageElem.textContent = message;
-    contentContainer.appendChild(titleElem);
-    contentContainer.appendChild(messageElem);
-    notification.appendChild(contentContainer);
+        document.body.appendChild(notification);
+        play_d();
 
-    document.body.appendChild(notification);
-    playSound();
-
-    setTimeout(() => {
-        notification.classList.add("slide-in");
         setTimeout(() => {
-            notification.classList.remove("slide-in");
-            notification.classList.add("slide-out");
+            notification.classList.add("slide-in");
             setTimeout(() => {
-                notification.remove();
-            }, 8000);
-        }, 3000);
-    }, 100);
-}
-
+                notification.classList.remove("slide-in");
+                notification.classList.add("slide-out");
+                setTimeout(() => {
+                    notification.remove();
+                }, 8000);
+            }, 3000);
+        }, 100);
+    }
+    
 const plusButton = document.getElementById('plus');
 
 plusButton.addEventListener('click', function() {
-    showNotification();
+  showNotification();
 });
-
 
 
 		// Assign handleMouse to mouse movement events
@@ -418,7 +417,7 @@ function timeout() {
 		}
 	);
 
-// Improvement for focus in games
+// Melhoria para o focus nos jogos
 document.getElementById("games").addEventListener("focusin", function (event) {
   const target = event.target;
 
@@ -443,18 +442,18 @@ document.getElementById("games").addEventListener("focusout", function (event) {
   }
 });
 
-// Improvement in the display of game images
+// Melhoria na exibição das imagens dos jogos
 $(".squareGame").hover(
   function () {
     $(this).find('.gameText').show();
     $(this).find('.gameTitle').show();
     $(this).find('#store').show();
-    $(this).find('.imgGame').css("opacity", "1"); // Display the image immediately
+    $(this).find('.imgGame').css("opacity", "1"); // Exibe a imagem imediatamente
   },
   function () {
     $(this).find('.gameText').hide();
     $(this).find('.gameTitle').hide();
     $(this).find('#store').hide();
-    $(this).find('.imgGame').css("opacity", "1"); // Set the original image opacity
+    $(this).find('.imgGame').css("opacity", "1"); // Define a opacidade original da imagem
   }
 );
