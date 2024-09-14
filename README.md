@@ -43,7 +43,7 @@ Arturo Cabrera: [@Pixmy](https://www.github.com/Pixmy)
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE). Feel free to use it for personal or commercial purposes.
+This project is licensed under the [MIT License](LICENSE).
 
 Enjoy exploring the PlayStation 4 interface recreated in Ps4-UI! If you have any questions or feedback, don't hesitate to get in touch.
 
