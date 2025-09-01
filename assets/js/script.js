@@ -12,9 +12,10 @@ $(document).ready(function(){
 		$('#store').hide();
 		timeout();
 
-		// Variables for current position
+		/* Variables for current position
 		var x, y;
 
+		
 		function handleMouse(e) {
 		  // Verify that x and y already have some value
 		  if (x && y) {
@@ -26,6 +27,7 @@ $(document).ready(function(){
 		  x = e.clientX;
 		  y = e.clientY;
 		}
+  		*/
 
     //Clock
 function currentTime() {
