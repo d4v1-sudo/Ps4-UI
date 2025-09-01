@@ -368,7 +368,7 @@ plusButton.addEventListener('click', function() {
 
 
 		// Assign handleMouse to mouse movement events
-		document.onmousemove = handleMouse;
+		// document.onmousemove = handleMouse;
 
 		 $(window).scroll(function(){
 	        if ($(this).scrollTop() > 10) {
