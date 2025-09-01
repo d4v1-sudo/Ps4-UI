@@ -318,7 +318,7 @@ let timer = setInterval(function () {
 //Notification
     function showNotification() {
         const title = "Hello World!";
-        const message = "Ganhou a primeira conquista.";
+        const message = "First Achievement.";
         const icon = "./assets/img/icon.png";
 
         const notification = document.createElement("div");
